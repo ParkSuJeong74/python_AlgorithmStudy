@@ -1,0 +1,10 @@
+n=int(input())
+score=list(map(int,input().split()))
+m=max(score)
+for i in range(n):
+    score[i]=score[i]/m*100
+hab=0
+for i in range(n):
+    hab+=score[i]
+new_average=hab/n
+print(new_average)
