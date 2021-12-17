@@ -3,7 +3,7 @@ B = list(set(A))
 C = []
 
 for i in B:
-    C.append(A.count(i)    
+    C.append(A.count(i))    
 if C.count(max(C)) > 1 :
     print("?")
 else : 
