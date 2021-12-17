@@ -1,8 +1,10 @@
-c_list=['c=','c-','dz=','d-','lj','nj','s=','z=']
-s=input()
-count=0
-new_s=[]
-for i in range (0,8):
-    s=s.replace(c_list[i],'1')
-count=len(s)
-print(count)
+c_list=['c=','c-','dz=','d-','lj','nj','s=','z=']   # 변경된 크로아티아 알파벳 모음 리스트    
+s=input()                                           # 단어 입력                                  ex) ljes=njak
+count=0                                             # 크로아티아 알파벳 개수를 저장할 카운트 변수
+#new_s=[]                                               
+for i in range (0,8):                               # 변경된 크로아티아 알파벳 리스트 인덱스 0부터 끝까지
+    s=s.replace(c_list[i],'1')                      # 변경된 크로아티아 알파벳 리스트 원소 하나씩 'c=' 부터 돌아면서 입력된 단어 안에 일부 문자열로 존재하는 경우 해당 문자열 '1'로교체
+count=len(s)                                        # s 는 ljes=njak에서 1e11ak 가 됨. 그리고 변경된 s의 길이는 6
+print(count)                                        
+
+# c_list에 해당하는 것들을 삭제하고 카운트+1 해주는 것도 해봤는데 z=z=처럼 같은게 여러개 있으면 한꺼번에 삭제되고 카운트는 +1만 됨.
